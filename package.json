@@ -4,7 +4,10 @@
   "dependencies": {
     "@decidim/browserslist-config": "^0.29.2",
     "@decidim/core": "^0.29.2",
-    "@decidim/webpacker": "^0.29.2"
+    "@decidim/webpacker": "^0.29.2",
+    "graphql": "^15.0.0",
+    "markdown-it": "^14.1.0",
+    "uc.micro": "^2.1.0"
   },
   "version": "0.1.0",
   "devDependencies": {
@@ -15,5 +18,8 @@
   },
   "browserslist": [
     "extends @decidim/browserslist-config"
-  ]
+  ],
+  "resolutions": {
+    "graphql-ws": "4.5.0"
+  }
 }
