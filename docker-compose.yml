@@ -34,7 +34,7 @@ services:
       - dokploy-network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.decidim-app.rule=Host(`decidim.afroleadership.tech`)"
+      - "traefik.http.routers.decidim-app.rule=Host(`nousparticipons.org`)"
       - "traefik.http.routers.decidim-app.entrypoints=web"
       - "traefik.http.routers.decidim-app.tls.certResolver=letsencrypt"
       - "traefik.http.services.decidim-app.loadbalancer.server.port=80"
