@@ -34,9 +34,7 @@ services:
       - dokploy-network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.decidim-app.tls.domains[0].main=nousparticipons.org"
-      - "traefik.http.routers.decidim-app.tls.domains[0].sans=*.nousparticipons.org"
-      - "traefik.http.routers.decidim-app.rule=HostRegexp(`{subdomain:[a-z0-9-]+}.nousparticipons.org`, `nousparticipons.org`)"
+      - "traefik.http.routers.decidim-app.rule=Host(`{nousparticipons.org`)"
       - "traefik.http.routers.decidim-app.entrypoints=web"
       - "traefik.http.routers.decidim-app.tls.certResolver=letsencrypt"
       - "traefik.http.services.decidim-app.loadbalancer.server.port=3000"
