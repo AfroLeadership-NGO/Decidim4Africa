@@ -34,10 +34,10 @@ services:
       - dokploy-network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.decidim-app.rule=Host(`{nousparticipons.org`)"
-      - "traefik.http.routers.decidim-app.entrypoints=web"
-      - "traefik.http.routers.decidim-app.tls.certResolver=letsencrypt"
-      - "traefik.http.services.decidim-app.loadbalancer.server.port=3000"
+      - "traefik.http.routers.decidimhost.rule=Host(`{nousparticipons.org`)"
+      - "traefik.http.routers.decidimweb.entrypoints=web"
+      - "traefik.http.routers.decidimtls.tls.certResolver=letsencrypt"
+      - "traefik.http.services.decidimport.loadbalancer.server.port=3000"
     command: bundle exec rails server
     
   db:
