@@ -30,15 +30,9 @@ services:
       - DECIDIM_ENABLE_ETIQUETTE_VALIDATOR=${DECIDIM_ENABLE_ETIQUETTE_VALIDATOR}
       - DECIDIM_SPAM_DETECTION_BACKEND_USER=${DECIDIM_SPAM_DETECTION_BACKEND_USER}
       - DECIDIM_SPAM_DETECTION_BACKEND_RESOURCE=${DECIDIM_SPAM_DETECTION_BACKEND_RESOURCE}
+    command: bundle exec rails server
     networks:
       - dokploy-network
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.decidim-app.rule=Host(`{nousparticipons.org`)"
-      - "traefik.http.routers.decidim-app.entrypoints=web"
-      - "traefik.http.routers.decidim-app.tls.certResolver=letsencrypt"
-      - "traefik.http.services.decidim-app.loadbalancer.server.port=3000"
-    command: bundle exec rails server
     
   db:
     image: postgres:13
