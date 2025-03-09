@@ -30,10 +30,6 @@ services:
       - DECIDIM_ENABLE_ETIQUETTE_VALIDATOR=${DECIDIM_ENABLE_ETIQUETTE_VALIDATOR}
       - DECIDIM_SPAM_DETECTION_BACKEND_USER=${DECIDIM_SPAM_DETECTION_BACKEND_USER}
       - DECIDIM_SPAM_DETECTION_BACKEND_RESOURCE=${DECIDIM_SPAM_DETECTION_BACKEND_RESOURCE}
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.decidim-app.tls.domains[0].main=nousparticipons.org"
-      - "traefik.http.routers.decidim-app.tls.domains[0].sans=*.nousparticipons.org"
     networks:
       - dokploy-network
     command: bundle exec rails server
