@@ -32,7 +32,7 @@ services:
       - DECIDIM_SPAM_DETECTION_BACKEND_RESOURCE=${DECIDIM_SPAM_DETECTION_BACKEND_RESOURCE}
     networks:
       - dokploy-network
-    label:
+    labels:
       - "traefik.http.routers.decidim-app.tls.domains[0].main=nousparticipons.org"
       - "traefik.http.routers.decidim-app.tls.domains[0].sans=*.nousparticipons.org"
       - "traefik.http.routers.decidim-app.rule=HostRegexp(`{subdomain:[a-z0-9-]+}.nousparticipons.org`)"
