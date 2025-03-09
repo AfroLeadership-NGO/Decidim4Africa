@@ -8,6 +8,11 @@ Rails.application.configure do
 
   config.hosts << "nousparticipons.org"
   config.hosts << "mokolo.nousparticipons.org"
+  config.hosts << "lagdo.nousparticipons.org"
+  config.hosts << "djohong.nousparticipons.org"
+  config.hosts << "bikok.nousparticipons.org"
+  config.hosts << "mandjou.nousparticipons.org"
+  config.hosts << "garoua-boulai.nousparticipons.org"
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
